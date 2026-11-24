@@ -1,0 +1,38 @@
+ STEP 7: Check files
+ls
+
+ STEP 8: Create namespaces
+kubectl apply -f namespaces.yaml
+
+ STEP 9: Create all four Pods
+kubectl apply -f pods.yaml
+
+ STEP 10: List namespaces
+kubectl get namespaces
+
+ STEP 11: Display Pods in dev namespace
+kubectl get pods -n dev
+
+ STEP 12: Display Pods in prod namespace
+kubectl get pods -n prod
+
+ STEP 13: Display frontend Pods in dev
+kubectl get pods -n dev -l app=frontend
+
+ STEP 14: Display backend Pods in dev
+kubectl get pods -n dev -l app=backend
+
+ STEP 15: Display frontend Pods in prod
+kubectl get pods -n prod -l app=frontend
+
+ STEP 16: Display backend Pods in prod
+kubectl get pods -n prod -l app=backend
+
+ STEP 17: Display all Pods in all namespaces
+kubectl get pods -A
+
+ STEP 18: Describe frontend Pod in dev
+kubectl describe pod frontend-pod -n dev
+
+ STEP 19: Describe backend Pod in prod
+kubectl describe pod backend-pod -n prod
